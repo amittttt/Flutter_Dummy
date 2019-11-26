@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget{
+class SplashScreen extends StatefulWidget {
   @override
   _SplashScreen createState() => _SplashScreen();
 }
 
-class _SplashScreen extends State<SplashScreen>{
+class _SplashScreen extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-      fit: StackFit.expand,
-      children: <Widget>[
+      body: Stack(fit: StackFit.expand, children: <Widget>[
         Container(
           decoration: BoxDecoration(
             color: new Color(0xFF03A9F4),
             gradient: LinearGradient(
-              colors: [new Color(0xFF4FC3F7),new Color(0xFF039BE5)],
+              colors: [new Color(0xFF4FC3F7), new Color(0xFF039BE5)],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              ),
+            ),
           ),
         ),
-
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -30,14 +27,14 @@ class _SplashScreen extends State<SplashScreen>{
               height: 100.0,
               width: 80.0,
               decoration: new BoxDecoration(
-              image: DecorationImage(
-              image: new AssetImage(
-              'assets/images/SplashScreen/logowithleft.png'),
-               fit: BoxFit.fill,
+                image: DecorationImage(
+                  image: new AssetImage(
+                      'assets/images/SplashScreen/logowithleft.png'),
+                  fit: BoxFit.fill,
+                ),
+                shape: BoxShape.circle,
               ),
-        shape: BoxShape.circle,
-      ),
-      ),
+            ),
             Padding(
               padding: EdgeInsets.only(top: 10.0),
             ),
@@ -46,27 +43,26 @@ class _SplashScreen extends State<SplashScreen>{
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24.0,
-               ),
+              ),
             ),
           ],
         ),
         Align(
-      alignment: Alignment.bottomCenter,
-      child: Container(
-        height: 100.0,
-      width: 200.0,
-      decoration: new BoxDecoration(
-        image: DecorationImage(
-          image: new AssetImage(
-              'assets/images/SplashScreen/delllogo.png'),
-          fit: BoxFit.fill,
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            height: 100.0,
+            width: 200.0,
+            decoration: new BoxDecoration(
+              image: DecorationImage(
+                image:
+                    new AssetImage('assets/images/SplashScreen/delllogo.png'),
+                fit: BoxFit.fill,
+              ),
+              shape: BoxShape.circle,
+            ),
+          ),
         ),
-        shape: BoxShape.circle,
-      ),
-      ),
-    ),
-      ]
-      ),
+      ]),
     );
   }
 }

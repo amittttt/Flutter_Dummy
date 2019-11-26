@@ -47,20 +47,21 @@ class _SplashScreen extends State<SplashScreen>{
             ),
           ],
         ),
-
-       Container(
-          margin: EdgeInsets.only(top:100),
+        Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        height: 100.0,
+      width: 200.0,
+      decoration: new BoxDecoration(
+        image: DecorationImage(
+          image: new AssetImage(
+              'assets/images/SplashScreen/delllogo.png'),
+          fit: BoxFit.fill,
         ),
-
-        Column(
-          children: <Widget>[
-            Text(
-              "Dsadas"
-            ),
-          ],
-        ),
-
-
+        shape: BoxShape.circle,
+      ),
+      ),
+    ),
       ]
       ),
     );

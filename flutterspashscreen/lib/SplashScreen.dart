@@ -26,15 +26,18 @@ class _SplashScreen extends State<SplashScreen>{
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            CircleAvatar(
-              backgroundColor: Colors.white,
-              radius: 75.0,
-              child: Icon(
-                Icons.beach_access,
-                color: Colors.deepOrange,
-                size: 50,
+            Container(
+              height: 100.0,
+              width: 80.0,
+              decoration: new BoxDecoration(
+              image: DecorationImage(
+              image: new AssetImage(
+              'assets/images/SplashScreen/logowithleft.png'),
+               fit: BoxFit.fill,
               ),
-            ),
+        shape: BoxShape.circle,
+      ),
+      ),
             Padding(
               padding: EdgeInsets.only(top: 10.0),
             ),

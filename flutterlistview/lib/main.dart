@@ -38,14 +38,17 @@ class MyApp extends StatelessWidget {
         itemCount: titles.length,
         itemBuilder: (context, index) {
           return Container(
-                  height: 100,
+                  height: 90,
                   child :Card( 
-                    
-                   child: ListTile(          
-                  leading: Icon(icons[index]),
-                  title: Text(titles[index], style: TextStyle(fontSize: 20)),
-                  trailing: Icon(Icons.keyboard_arrow_right),
+                  child: new Container(
+                    padding: new EdgeInsets.only(top: 16.4),
+                    child: ListTile(          
+                    leading: Icon(icons[index]),
+                    title: Text(titles[index], style: TextStyle(fontSize: 20)),
+                    trailing: Icon(Icons.keyboard_arrow_right),
                     ),
+                  )
+                  
           ),
           );
         },

@@ -24,15 +24,15 @@ class _SplashScreen extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              height: 100.0,
-              width: 100.0,
+              height: 150.0,
+              width: 150.0,
               decoration: new BoxDecoration(
                 image: DecorationImage(
                   image: new AssetImage(
                       'assets/images/SplashScreen/splashscreenlogo.png'),
                   fit: BoxFit.fill,
                 ),
-                shape: BoxShape.circle,
+                shape: BoxShape.rectangle,
               ),
             ),
             Padding(

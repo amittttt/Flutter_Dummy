@@ -25,11 +25,11 @@ class _SplashScreen extends State<SplashScreen> {
           children: <Widget>[
             Container(
               height: 100.0,
-              width: 80.0,
+              width: 100.0,
               decoration: new BoxDecoration(
                 image: DecorationImage(
                   image: new AssetImage(
-                      'assets/images/SplashScreen/logowithleft.png'),
+                      'assets/images/SplashScreen/splashscreenlogo.png'),
                   fit: BoxFit.fill,
                 ),
                 shape: BoxShape.circle,

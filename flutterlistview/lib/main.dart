@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
                   height: 90,
                   child :Card( 
                   child: new Container(
-                    padding: new EdgeInsets.only(top: 16.4),
+                    padding: new EdgeInsets.only(top: 16.0),
                     child: ListTile(          
                     leading: Icon(icons[index]),
                     title: Text(titles[index], style: TextStyle(fontSize: 20)),

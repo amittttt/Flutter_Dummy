@@ -56,8 +56,7 @@ Widget _myListView(BuildContext context) {
     '2%',
     '10%'
   ];
-
-  final iconList =[
+  final iconList = [
     'arrow_downward',
     'arrow_upward',
     'arrow_upward',
@@ -71,15 +70,37 @@ Widget _myListView(BuildContext context) {
     'arrow_upward',
     'arrow_upward'
   ];
-
+void onCardTapped(int index){
+      showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("Alert Dialog title"),
+          content: new Text(index.toString()),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("Close"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+}
   return ListView.builder(
     itemCount: titles.length,
     itemBuilder: (context, index) {
-      return Container(
+      return GestureDetector(
+        onTap: () => onCardTapped(index),
+        child:  Container(
         height: 70,
         child: Card(
             child: new Container(
-          child: Row(
+            child: Row(
             children: [
               Container(
                 margin: const EdgeInsets.only(left: 10.0),
@@ -120,14 +141,25 @@ Widget _myListView(BuildContext context) {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    iconList[index]=="arrow_upward"?Icon(Icons.arrow_upward, size: 40, color: Colors.red.shade400,):Icon(Icons.arrow_downward, size: 40, color: Colors.green.shade400,),
-                    
+                    iconList[index] == "arrow_upward"
+                        ? Icon(
+                            Icons.arrow_upward,
+                            size: 40,
+                            color: Colors.red.shade400,
+                          )
+                        : Icon(
+                            Icons.arrow_downward,
+                            size: 40,
+                            color: Colors.green.shade400,
+                          ),
                   ],
                 ),
               ),
             ],
           ),
-        )),
+          )
+        ),
+      ),
       );
     },
   );
